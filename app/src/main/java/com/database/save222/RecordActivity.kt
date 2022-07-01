@@ -36,7 +36,6 @@ class RecordActivity : AppCompatActivity() {
 //
 //                when(resp.code){
 //                    1000->finish()
-//
 //                }
 //            }
 //
