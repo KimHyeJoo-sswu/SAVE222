@@ -1,8 +1,11 @@
 package com.database.save222
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.database.save222.databinding.ActivityRecordBinding
+import retrofit2.Call
+import retrofit2.Callback
 
 class RecordActivity : AppCompatActivity() {
     lateinit var binding: ActivityRecordBinding
@@ -23,8 +26,25 @@ class RecordActivity : AppCompatActivity() {
         return Record(userName,childName,date,decibel,location)
     }
 
-    private fun save() {
-
-    }
+//    private fun save() {
+//
+//        val authService = getRetrofit().create(RetrofitInterface::class.java)
+//        authService.record(getRecord()).enqueue(object: Callback<Response> {
+//            override fun onResponse(call: Call<Response>, response: retrofit2.Response<Response>) {
+//                Log.d("RECORD/SUCCESS",response.toString())
+//                val resp: Response = response.body()!!
+//
+//                when(resp.code){
+//                    1000->finish()
+//
+//                }
+//            }
+//
+//            override fun onFailure(call: Call<Response>, t: Throwable) {
+//                Log.d("RECORD/FAILURE",t.message.toString())
+//            }
+//        })
+//
+//    }
 
 }
