@@ -55,6 +55,7 @@ class RecordActivity : AppCompatActivity(), RecordResult {
         }
 
         val authService = AuthService()
+        authService.setRecordResult(this)
         authService.record(getRecord())
     }
 
@@ -64,7 +65,7 @@ class RecordActivity : AppCompatActivity(), RecordResult {
     }
 
     override fun recordSuccess() {
-        finish()
+        Toast.makeText(this, "기록을 성공했습니다.", Toast.LENGTH_SHORT).show()
     }
 
     override fun recordFailure() {

@@ -9,6 +9,10 @@ class AuthService {
 
     private lateinit var recordResult : RecordResult
 
+    fun setRecordResult(recordResult: RecordResult){
+        this.recordResult = recordResult
+    }
+
     fun record(record: Record){
         val authService = getRetrofit().create(AuthRetrofitInterface::class.java)
         authService.record(record).enqueue(object: Callback<AuthResponse> {
