@@ -7,7 +7,7 @@ const val BASE_URL = "서버 연결 주소"
 
 fun getRetrofit(): Retrofit {
     val retrofit = Retrofit.Builder()
-        .baseUrl(BASE_URL)
+        .baseUrl("http://eunhyun.shop:9000")
         .addConverterFactory(GsonConverterFactory.create()).build()
     return retrofit
 }
